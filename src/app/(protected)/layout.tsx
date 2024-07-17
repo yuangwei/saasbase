@@ -1,3 +1,4 @@
+import CommonLayout from '@/components/layouts/common'
 import type { Metadata } from 'next'
 
 
@@ -10,5 +11,9 @@ export default function ProtectedLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <CommonLazbuyout>
+      {children}
+    </CommonLazbuyout>
+  )
 }
