@@ -12,8 +12,8 @@ export default function ProtectedLayout({
   children: React.ReactNode
 }) {
   return (
-    <CommonLazbuyout>
+    <CommonLayout>
       {children}
-    </CommonLazbuyout>
+    </CommonLayout>
   )
 }
