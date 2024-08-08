@@ -1,46 +1,29 @@
 import AuthForm from "@/components/layouts/auth-form"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import Link from "next/link"
 
 
-export default function ForgotPassword() {
+export default function NewPassword() {
   return (
     <div className="w-full lg:grid lg:min-h-[600px] xl:min-h-[800px]">
       <AuthForm
-        title="Reset your password"
-        bottom={
-          <Link href="/login" className="underline">
-            Back to Login
-          </Link>
-        }
+        title="New password"
       >
         <div className="grid gap-2">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="m@example.com"
-            required
-          />
+          <div className="flex items-center">
+            <Label htmlFor="password">Password</Label>
+          </div>
+          <Input id="password" type="password" required />
         </div>
         <div className="grid gap-2">
           <div className="flex items-center">
-            <Label htmlFor="password">Verify Code</Label>
+            <Label htmlFor="password">Confim Password</Label>
           </div>
           <Input id="password" type="password" required />
         </div>
         <Button type="submit" className="w-full">
-          Confirm Email
+          Reset Password
         </Button>
       </AuthForm>
     </div>

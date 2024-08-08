@@ -1,27 +1,21 @@
-import AuthForm from "@/components/layouts/auth-form"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import Link from "next/link"
+import AuthForm from "@/components/layouts/auth-form"
 
-
-export default function ForgotPassword() {
+export default function SignUpPage() {
   return (
     <div className="w-full lg:grid lg:min-h-[600px] xl:min-h-[800px]">
       <AuthForm
-        title="Reset your password"
+        title="Sign Up"
         bottom={
-          <Link href="/login" className="underline">
-            Back to Login
-          </Link>
+          <>
+            Already have an account?{" "}
+            <Link href="/login" className="underline">
+              Login
+            </Link>
+          </>
         }
       >
         <div className="grid gap-2">
@@ -35,12 +29,15 @@ export default function ForgotPassword() {
         </div>
         <div className="grid gap-2">
           <div className="flex items-center">
-            <Label htmlFor="password">Verify Code</Label>
+            <Label htmlFor="password">Password</Label>
           </div>
           <Input id="password" type="password" required />
         </div>
         <Button type="submit" className="w-full">
-          Confirm Email
+          Sign Up
+        </Button>
+        <Button variant="outline" className="w-full">
+          Sign Up with Google
         </Button>
       </AuthForm>
     </div>

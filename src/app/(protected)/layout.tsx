@@ -1,5 +1,5 @@
-import CommonLayout from '@/components/layouts/common'
 import type { Metadata } from 'next'
+import DashboardLayout from '@/components/layouts/dashboard'
 
 
 export const metadata: Metadata = {
@@ -12,8 +12,8 @@ export default function ProtectedLayout({
   children: React.ReactNode
 }) {
   return (
-    <CommonLayout>
+    <DashboardLayout>
       {children}
-    </CommonLayout>
+    </DashboardLayout>
   )
 }

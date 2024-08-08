@@ -1,7 +1,7 @@
 "use client"
 
 
-export default function Dashboard() {
+export default function Product() {
   return (
     <main className="flex">
       
